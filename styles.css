@@ -1,0 +1,148 @@
+/* Reset default styles */
+body, ul, li, p, h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, #000428, #004e92);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin-left: 20px;
+}
+
+/* Navigation links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: #f7b42c;
+}
+
+/* Scroll effect */
+.scrolled {
+    background: #111;
+}
+
+/* Sections */
+section {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+/* Background colors for sections */
+#home { background: linear-gradient(to right, #000428, #004e92); }
+#about { background: linear-gradient(to right, #1e3a8a, #00b4db); }
+#services { background: linear-gradient(to right, #00b4db, #0083b0); }
+#contact { background: linear-gradient(to right, #0083b0, #000428); }
+
+/* Section Content */
+.content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 20px;
+    color: white;
+    background: #f7b42c;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #d19a22;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.service-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.service-box h2 {
+    font-size: 24px;
+}
+
+.service-box p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
